@@ -1,5 +1,5 @@
-book_filename: "edar_coursebook"
-repo: https://github.com/SmogDr/edar_coursebook
+book_filename: "aqda_coursebook"
+repo: https://github.com/QuinnResearch/aqda_coursebook
 delete_merged_file: true
 output_dir: "docs"
 new_session: yes

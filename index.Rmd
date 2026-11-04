@@ -1,6 +1,6 @@
 ---
-title: "Engineering Data Analysis in R"
-author: "John Volckens"
+title: "Air Quality and Data Analysis"
+author: "Casey Quinn"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 knit: "bookdown::render_book"
@@ -11,7 +11,7 @@ documentclass: book
 bibliography: packages.bib
 biblio-style: apalike
 link-citations: yes
-description: "This is an undergraduate technical elective course for mechanical engineers who wish to learn about data analysis using the R programming language."
+description: "This is an undergraduate technical elective course for mechanical engineers who wish to learn about air quality and data analysis using the R programming language."
 ---
 
 ```{r ch1pkgs, echo=FALSE, warning=FALSE}
@@ -65,20 +65,21 @@ is hosted.
 
 ## Prerequisites
 
-This course is intended for upper-level undergraduates who have completed MECH
-231 (Experimental Design).
+This course is intended for upper-level undergraduates.
 
 ## Grading
 
-### Grading for MECH 476
+### Grading for TME 490
 
 Course grades will be determined by the following three components:
 
 ```{r grading, echo=FALSE}
-grading <- data.frame(a = c("Exams",
+grading <- data.frame(a = c("Attendance and Class Participation",
+                            "Homework",
                             "Quizzes",
-                            "Assignments"),
-                      b = c(65, 10, 25))
+                            "Course Project",
+                            "Final Exam"),
+                      b = c(20, 20, 20, 20, 20))
 knitr::kable(grading, 
              col.names = c("Assessment component", 
                            "Percent of grade"),
