@@ -145,7 +145,7 @@ Quantiles allow us to calculate several important descriptive statistics for uni
 
 
 
-<table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<table class="table table-striped" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;">
 <caption>(\#tab:quant-desc-table)(\#tab:quant-desc-table)Quantiles and descriptive statistics for `hwy` fuel efficiency from ggplot::mpg$hwy</caption>
  <thead>
   <tr>

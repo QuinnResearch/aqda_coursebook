@@ -4,26 +4,26 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 6 Strings, Dates, and Tidying | Engineering Data Analysis in R</title>
-  <meta name="description" content="This is an undergraduate technical elective course for mechanical engineers who wish to learn about data analysis using the R programming language." />
+  <title>Chapter 6 Strings, Dates, and Tidying | Air Quality and Data Analysis</title>
+  <meta name="description" content="This is an undergraduate technical elective course for mechanical engineers who wish to learn about air quality and data analysis using the R programming language." />
   <meta name="generator" content="bookdown 0.48 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 6 Strings, Dates, and Tidying | Engineering Data Analysis in R" />
+  <meta property="og:title" content="Chapter 6 Strings, Dates, and Tidying | Air Quality and Data Analysis" />
   <meta property="og:type" content="book" />
   
-  <meta property="og:description" content="This is an undergraduate technical elective course for mechanical engineers who wish to learn about data analysis using the R programming language." />
+  <meta property="og:description" content="This is an undergraduate technical elective course for mechanical engineers who wish to learn about air quality and data analysis using the R programming language." />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 6 Strings, Dates, and Tidying | Engineering Data Analysis in R" />
+  <meta name="twitter:title" content="Chapter 6 Strings, Dates, and Tidying | Air Quality and Data Analysis" />
   
-  <meta name="twitter:description" content="This is an undergraduate technical elective course for mechanical engineers who wish to learn about data analysis using the R programming language." />
+  <meta name="twitter:description" content="This is an undergraduate technical elective course for mechanical engineers who wish to learn about air quality and data analysis using the R programming language." />
   
 
-<meta name="author" content="John Volckens" />
+<meta name="author" content="Casey Quinn" />
 
 
-<meta name="date" content="2026-10-23" />
+<meta name="date" content="2026-11-03" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -142,7 +142,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">Engineering Data Analysis in R</a></li>
+<li><a href="./">Air Quality and Data Analysis</a></li>
 
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
@@ -151,7 +151,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#prerequisites"><i class="fa fa-check"></i><b>1.2</b> Prerequisites</a></li>
 <li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#grading"><i class="fa fa-check"></i><b>1.3</b> Grading</a>
 <ul>
-<li class="chapter" data-level="1.3.1" data-path="index.html"><a href="index.html#grading-for-mech-476"><i class="fa fa-check"></i><b>1.3.1</b> Grading for MECH 476</a></li>
+<li class="chapter" data-level="1.3.1" data-path="index.html"><a href="index.html#grading-for-tme-490"><i class="fa fa-check"></i><b>1.3.1</b> Grading for TME 490</a></li>
 <li class="chapter" data-level="1.3.2" data-path="index.html"><a href="index.html#homework-submission"><i class="fa fa-check"></i><b>1.3.2</b> Homework submission</a></li>
 </ul></li>
 <li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#course-set-up"><i class="fa fa-check"></i><b>1.4</b> Course set-up</a>
@@ -502,7 +502,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Engineering Data Analysis in R</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Air Quality and Data Analysis</a>
           </h1>
         </div>
 
@@ -596,7 +596,7 @@ your posts, each one as a string. You can learn a lot about a person
 and the <code>stringr</code> package. We will also introduce the concept of
 <strong>regular expressions</strong> as a means to perform more advanced string
 manipulation.</p>
-<p><img src="images/parse_comic.png" alt="" width="1000" style="display: block; margin: auto;" /></p>
+<p><img src="images/parse_comic.png" alt="" style="display: block; margin: auto;" /></p>
 <div id="string-detect-match-subset" class="section level3 hasAnchor" number="6.2.1">
 <h3><span class="header-section-number">6.2.1</span> String detect, match, subset<a href="rprog3.html#string-detect-match-subset" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>One of the simplest string operations is to search whether a string contains a
@@ -876,7 +876,7 @@ date-times before 1/1/1970; it just treats them as negative values!</p>
 <p>To see a date-time object, you can tell R to give you the current "System Time"
 by calling the <code>Sys.time()</code> function.</p>
 <div class="sourceCode" id="cb220"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb220-1"><a href="rprog3.html#cb220-1" tabindex="-1"></a><span class="fu">Sys.time</span>()</span></code></pre></div>
-<pre><code>## [1] &quot;2026-10-23 10:56:40 MDT&quot;</code></pre>
+<pre><code>## [1] &quot;2026-11-03 22:30:27 PST&quot;</code></pre>
 <p>As you can see, we got back the date, time, and timezone used by my computer
 (<em>whenever I last ran this code in <code>bookdown</code></em>). If you want to see how this
 time is stored in R internally, you can use <code>unclass()</code>, which returns an
@@ -884,22 +884,22 @@ object value with its class attributes removed. When we wrap <code>unclass()</co
 around <code>Sys.time()</code>, we will see the number of seconds that have occurred
 between the epoch of 1/1/1970 and right now:</p>
 <div class="sourceCode" id="cb222"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb222-1"><a href="rprog3.html#cb222-1" tabindex="-1"></a><span class="fu">unclass</span>(<span class="fu">Sys.time</span>())</span></code></pre></div>
-<pre><code>## [1] 1792774600</code></pre>
+<pre><code>## [1] 1793773828</code></pre>
 <p>That's a lot of seconds. How many years is that?<br />
 Just divide that number by [60s/min <span class="math inline">\(\cdot\)</span> 60min/hr <span class="math inline">\(\cdot\)</span> 24hr/d <span class="math inline">\(\cdot\)</span>
-365d/yr] =&gt; 56.8485097 years.</p>
+365d/yr] =&gt; 56.8801949 years.</p>
 <p>This calculation ignores leap years, but you get the point...</p>
 </div>
 <div id="date-time-formats" class="section level3 hasAnchor" number="6.3.2">
 <h3><span class="header-section-number">6.3.2</span> Date-time formats<a href="rprog3.html#date-time-formats" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Note that the <code>Sys.time()</code> function provided the date in a
 <strong><em>"year-month-day"</em></strong> format and the time in an <strong><em>"hour-minute-second"</em></strong>
-format: 2026-10-23 10:56:40.470184.</p>
+format: 2026-11-03 22:30:27.732468.</p>
 <p>Not everyone uses this exact ordering when they record dates and times, which
 is one of the reasons working with dates and times can be tricky. You probably
 have little difficulty recognizing the following date-time objects as
 equivalent but, for some computer programs, not so much:</p>
-<table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<table class="table table-striped" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;">
 <caption>
 <span id="tab:date-times-1">Table 6.2: </span><span id="tab:date-times-1">Table 6.3: </span>Date-time objects come in different forms
 </caption>
@@ -982,7 +982,7 @@ means that most Coloradoans eat dinner at 12am UTC (6pm MST).
 </ul></li>
 </ol>
 <p>As a reminder, here are some common <strong>object classes</strong> in R:</p>
-<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<table class="table" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
 <th style="text-align:left;">
@@ -1055,22 +1055,22 @@ classes using <code>as.POSIXct</code> and <code>as.POSIXlt</code> functions and 
 attributes.</p>
 <div class="sourceCode" id="cb226"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb226-1"><a href="rprog3.html#cb226-1" tabindex="-1"></a>time_now_ct <span class="ot">&lt;-</span> <span class="fu">as.POSIXct</span>(<span class="fu">Sys.time</span>())</span>
 <span id="cb226-2"><a href="rprog3.html#cb226-2" tabindex="-1"></a><span class="fu">unclass</span>(time_now_ct)</span></code></pre></div>
-<pre><code>## [1] 1792774601</code></pre>
+<pre><code>## [1] 1793773828</code></pre>
 <div class="sourceCode" id="cb228"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb228-1"><a href="rprog3.html#cb228-1" tabindex="-1"></a>time_now_lt <span class="ot">&lt;-</span> <span class="fu">as.POSIXlt</span>(<span class="fu">Sys.time</span>())</span>
 <span id="cb228-2"><a href="rprog3.html#cb228-2" tabindex="-1"></a><span class="fu">str</span>(<span class="fu">unclass</span>(time_now_lt)) <span class="co"># the `str()` function makes the output more compact</span></span></code></pre></div>
 <pre><code>## List of 11
-##  $ sec   : num 40.5
-##  $ min   : int 56
-##  $ hour  : int 10
-##  $ mday  : int 23
-##  $ mon   : int 9
+##  $ sec   : num 28.1
+##  $ min   : int 30
+##  $ hour  : int 22
+##  $ mday  : int 3
+##  $ mon   : int 10
 ##  $ year  : int 126
-##  $ wday  : int 5
-##  $ yday  : int 295
-##  $ isdst : int 1
-##  $ zone  : chr &quot;MDT&quot;
-##  $ gmtoff: int -21600
-##  - attr(*, &quot;tzone&quot;)= chr [1:3] &quot;&quot; &quot;MST&quot; &quot;MDT&quot;
+##  $ wday  : int 2
+##  $ yday  : int 306
+##  $ isdst : int 0
+##  $ zone  : chr &quot;PST&quot;
+##  $ gmtoff: int -28800
+##  - attr(*, &quot;tzone&quot;)= chr [1:3] &quot;&quot; &quot;PST&quot; &quot;PDT&quot;
 ##  - attr(*, &quot;balanced&quot;)= logi TRUE</code></pre>
 <p>It's easy to see why the <code>POSIXct</code> object class is more computationally
 efficient, but it's also nice to see all the date-time information packed into
@@ -1103,7 +1103,7 @@ That is to say, this function not simple to master. If you are a glutton for
 punishment, I invite you to read the R Documentation with <code>?strptime</code>.</p>
 <p>Here are a few base R functions for working with date-time objects that are
 worth knowing:</p>
-<table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<table class="table table-striped" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;">
 <caption>
 <span id="tab:base-r-times">Table 6.4: </span><span id="tab:base-r-times">Table 6.5: </span>Basic Date-time functions
 </caption>
@@ -1237,7 +1237,7 @@ same <code>lubridate</code> parsing function, <code>ymd()</code>:</p>
 with almost no effort on your part. But wait, there's more!</p>
 <p>The <code>lubridate</code> package contains parsing functions for almost any order you can
 imagine.</p>
-<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<table class="table" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
 <th style="text-align:left;">
@@ -1279,7 +1279,7 @@ day-month-year
 the function call to parse time in "hours-minutes-seconds" format. Some
 additional examples of how you would parse time that followed from a <code>ymd</code>
 format:</p>
-<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<table class="table" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
 <th style="text-align:left;">
@@ -1431,7 +1431,7 @@ the variable depicting the exam score shows up in three different columns.<br />
 Another way to characterize the <em>untidiness</em> of this table is that we have three
 different exams (Exam1, Exam2, Exam3) that represent a variable (Exam_# or
 Exam_type), that is not represented with a column.</p>
-<table class="table table-condensed" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<table class="table table-condensed" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;">
 <caption>
 <span id="tab:grades-untidy">Table 6.6: </span><span id="tab:grades-untidy">Table 6.7: </span>An Untidy Table of Exam Scores.
 </caption>
@@ -1499,7 +1499,7 @@ Hermione
 <p>Thus, to tidy table <a href="rprog3.html#tab:grades-untidy">6.6</a>, we need to create a variable
 called <code>Exam</code> and move all the scores into a new column vector named <code>Scores</code>.
 This effectively makes the data "long" rather than "wide".</p>
-<table class="table table-condensed" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<table class="table table-condensed" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;">
 <caption>
 <span id="tab:grades-tidy">Table 6.8: </span><span id="tab:grades-tidy">Table 6.9: </span>A Tidy Table of Exam Scores
 </caption>
@@ -1680,7 +1680,7 @@ then replace that entry with a 2; else, if the vector contains a string that mat
 <span id="cb247-14"><a href="rprog3.html#cb247-14" tabindex="-1"></a>    Exam <span class="sc">==</span> <span class="st">&quot;Exam2_Score&quot;</span> <span class="sc">~</span> <span class="dv">2</span>,</span>
 <span id="cb247-15"><a href="rprog3.html#cb247-15" tabindex="-1"></a>    Exam <span class="sc">==</span> <span class="st">&quot;Exam3_Score&quot;</span> <span class="sc">~</span> <span class="dv">3</span></span>
 <span id="cb247-16"><a href="rprog3.html#cb247-16" tabindex="-1"></a>  ))</span></code></pre></div>
-<table class="table table-condensed" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<table class="table table-condensed" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;">
 <caption>
 <span id="tab:grades-tab3">Table 6.10: </span><span id="tab:grades-tab3">Table 6.11: </span>Pivot longer applied to untidy data
 </caption>

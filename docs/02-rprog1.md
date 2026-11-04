@@ -292,7 +292,7 @@ getRversion()
 ```
 
 ```
-## [1] '4.6.1'
+## [1] '4.6.2'
 ```
 
 Some functions will accept multiple arguments. For example, the `print()`
@@ -1376,7 +1376,7 @@ str(object = daily_show)
 ##   ..   Group = col_character(),
 ##   ..   Raw_Guest_List = col_character()
 ##   .. )
-##  - attr(*, "problems")=<pointer: 0x82c624300>
+##  - attr(*, "problems")=<pointer: 0x7fbc04248c60>
 ```
 
 ``` r

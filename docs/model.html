@@ -4,26 +4,26 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 11 Modeling | Engineering Data Analysis in R</title>
-  <meta name="description" content="This is an undergraduate technical elective course for mechanical engineers who wish to learn about data analysis using the R programming language." />
+  <title>Chapter 11 Modeling | Air Quality and Data Analysis</title>
+  <meta name="description" content="This is an undergraduate technical elective course for mechanical engineers who wish to learn about air quality and data analysis using the R programming language." />
   <meta name="generator" content="bookdown 0.48 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 11 Modeling | Engineering Data Analysis in R" />
+  <meta property="og:title" content="Chapter 11 Modeling | Air Quality and Data Analysis" />
   <meta property="og:type" content="book" />
   
-  <meta property="og:description" content="This is an undergraduate technical elective course for mechanical engineers who wish to learn about data analysis using the R programming language." />
+  <meta property="og:description" content="This is an undergraduate technical elective course for mechanical engineers who wish to learn about air quality and data analysis using the R programming language." />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 11 Modeling | Engineering Data Analysis in R" />
+  <meta name="twitter:title" content="Chapter 11 Modeling | Air Quality and Data Analysis" />
   
-  <meta name="twitter:description" content="This is an undergraduate technical elective course for mechanical engineers who wish to learn about data analysis using the R programming language." />
+  <meta name="twitter:description" content="This is an undergraduate technical elective course for mechanical engineers who wish to learn about air quality and data analysis using the R programming language." />
   
 
-<meta name="author" content="John Volckens" />
+<meta name="author" content="Casey Quinn" />
 
 
-<meta name="date" content="2026-10-23" />
+<meta name="date" content="2026-11-03" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -142,7 +142,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">Engineering Data Analysis in R</a></li>
+<li><a href="./">Air Quality and Data Analysis</a></li>
 
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
@@ -151,7 +151,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#prerequisites"><i class="fa fa-check"></i><b>1.2</b> Prerequisites</a></li>
 <li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#grading"><i class="fa fa-check"></i><b>1.3</b> Grading</a>
 <ul>
-<li class="chapter" data-level="1.3.1" data-path="index.html"><a href="index.html#grading-for-mech-476"><i class="fa fa-check"></i><b>1.3.1</b> Grading for MECH 476</a></li>
+<li class="chapter" data-level="1.3.1" data-path="index.html"><a href="index.html#grading-for-tme-490"><i class="fa fa-check"></i><b>1.3.1</b> Grading for TME 490</a></li>
 <li class="chapter" data-level="1.3.2" data-path="index.html"><a href="index.html#homework-submission"><i class="fa fa-check"></i><b>1.3.2</b> Homework submission</a></li>
 </ul></li>
 <li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#course-set-up"><i class="fa fa-check"></i><b>1.4</b> Course set-up</a>
@@ -502,7 +502,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Engineering Data Analysis in R</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Air Quality and Data Analysis</a>
           </h1>
         </div>
 
@@ -587,7 +587,7 @@ where:</p>
     <span class="math inline">\(\epsilon\)</span> = the error term (i.e., what is left over; what the model doesn't explain about <span class="math inline">\(Y\)</span>)</p>
 <p>The OLS approach is straightforward: select model parameters (<span class="math inline">\(\beta_{0}\)</span>, <span class="math inline">\(\beta_{1}\)</span>) so that the model produces as little error as possible. With OLS, the overall model error is expressed as the sum of each residual value squared: a <em>sum-of-squares error</em> (SSE; explained below). Graphically, this is shown in Figure <a href="model.html#fig:OLS-anno">11.2</a>, where the solid blue circles represent the data (<span class="math inline">\(X_{i}, Y_{i}\)</span>). The grey line represents the "best fit" line that gives the smallest SSE possible. The model <strong><em>residuals</em></strong> (what are used to calculate the SSE) are denoted by vertical lines connecting the data points to the "best-fit line". The optimization algorithm that sets the slope and intercept to minimize the sum of squares error is executed with matrix algebra, although the paramaters for simple linear regression between two variables, <span class="math inline">\(X,Y,\)</span> are easily calculated - see <a href="dist.html#OLS">here</a>.</p>
 <div class="figure"><span style="display:block;" id="fig:OLS-anno"></span>
-<img src="images/OLS_anno.png" alt="Graphical depiction for an OLS regression fit to minimize the sum of squared residuals" width="2126" />
+<img src="images/OLS_anno.png" alt="Graphical depiction for an OLS regression fit to minimize the sum of squared residuals"  />
 <p class="caption">
 Figure 11.2: Graphical depiction for an OLS regression fit to minimize the sum of squared residuals
 </p>
@@ -768,7 +768,7 @@ Thus, substituting one equation into another, we arrive at the conclusion that m
 <span class="math display">\[mass = \rho\cdot \frac{Circumference^{2}}{2\pi}\cdot height\]</span>
 Or, another way to say this is that the square root of mass is linearly related to body circumference.
 <span class="math display">\[\sqrt{mass} \sim Circumference\]</span>
-<img src="images/cylinder_comic.png" alt="" width="552" style="display: block; margin: auto;" /></p>
+<img src="images/cylinder_comic.png" alt="" style="display: block; margin: auto;" /></p>
 <p>Let's transform <span class="math inline">\(mass \rightarrow \sqrt{mass}\)</span> and then examine the two scatterplots side by side.</p>
 <div class="sourceCode" id="cb367"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb367-1"><a href="model.html#cb367-1" tabindex="-1"></a>p1 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> data_18) <span class="sc">+</span></span>
 <span id="cb367-2"><a href="model.html#cb367-2" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x =</span> waist, <span class="at">y =</span> mass),</span>
@@ -813,7 +813,7 @@ Figure 11.5: Side-by-side comparison of two model specifications. Does one look 
 <span id="cb370-3"><a href="model.html#cb370-3" tabindex="-1"></a>model2 <span class="ot">&lt;-</span> <span class="fu">lm</span>(<span class="at">formula =</span> sqrt_mass <span class="sc">~</span> waist, <span class="at">data =</span> data_18)</span></code></pre></div>
 <p>Now that we have stored each model as an object (<code>model1</code>, <code>model2</code>), so we can examine what they contain. The output of <code>lm()</code> is a list of class "lm". If we type <code>view(model1)</code> the contents of the list become apparent.</p>
 <div class="figure"><span style="display:block;" id="fig:model1-list"></span>
-<img src="images/model1_list.png" alt="The `lm()` function provides a self-contained list of the model, data frame, parameter estimates, residuals, and more." width="632" />
+<img src="images/model1_list.png" alt="The `lm()` function provides a self-contained list of the model, data frame, parameter estimates, residuals, and more."  />
 <p class="caption">
 Figure 11.6: The <code>lm()</code> function provides a self-contained list of the model, data frame, parameter estimates, residuals, and more.
 </p>
@@ -837,8 +837,8 @@ Figure 11.6: The <code>lm()</code> function provides a self-contained list of th
 ## 
 ## Coefficients:
 ##               Estimate Std. Error t value Pr(&gt;|t|)    
-## (Intercept) -34.369905   0.816491   -42.1   &lt;2e-16 ***
-## waist         1.164666   0.008034   145.0   &lt;2e-16 ***
+## (Intercept) -34.369905   0.816491  -42.09   &lt;2e-16 ***
+## waist         1.164666   0.008034  144.98   &lt;2e-16 ***
 ## ---
 ## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
 ## 
@@ -913,9 +913,9 @@ This assumption is automatically valid because we have only one independent pred
 <p><strong>Assumption #4: The error term has a mean of zero.</strong><br />
 We can calculate this from our two model objects.</p>
 <div class="sourceCode" id="cb376"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb376-1"><a href="model.html#cb376-1" tabindex="-1"></a><span class="fu">mean</span>(model1<span class="sc">$</span>residuals)</span></code></pre></div>
-<pre><code>## [1] -1.338704e-17</code></pre>
+<pre><code>## [1] 9.514288e-17</code></pre>
 <div class="sourceCode" id="cb378"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb378-1"><a href="model.html#cb378-1" tabindex="-1"></a><span class="fu">mean</span>(model2<span class="sc">$</span>residuals)</span></code></pre></div>
-<pre><code>## [1] 4.612521e-19</code></pre>
+<pre><code>## [1] 1.334225e-17</code></pre>
 <p>Those are pretty small numbers. Check and check.</p>
 <p><strong>Assumption #5: The error term is normally distributed</strong><br />
 This assumption can be checked several ways, but my preference is to create a Q-Q plot about the residuals (the Q's stand for <em>"quantile-quantile"</em>). A Q-Q plot is a scatterplot that relates the quantile values of your data against the quantiles of an "expected distribution" - in this case the <a href="dist.html#normal_dist">normal distribution</a>. If "your data" follow the shape of the "expected data" then both datasets can be said to follow the same distribution. Thus, when you plot residuals on a "normal Q-Q plot", you are looking for your data to fall along a straight line through the center. The <code>{ggplot}</code> package allow you to create Q-Q plots using <code>geom_qq()</code> function, which creates the plot, and <code>geom_qq_line()</code>, which adds the "expected" line to aid your eye. The <code>{stats}</code> package in base R also allows you to do this with the <code>qqnorm()</code> and the <code>qqline()</code> functions.</p>
@@ -992,11 +992,11 @@ This assumption can be evaluated through a correlation analysis. The <code>cor()
 <div class="sourceCode" id="cb384"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb384-1"><a href="model.html#cb384-1" tabindex="-1"></a><span class="fu">cor</span>(<span class="at">x =</span> model1<span class="sc">$</span>residuals, </span>
 <span id="cb384-2"><a href="model.html#cb384-2" tabindex="-1"></a>    <span class="at">y =</span> model1<span class="sc">$</span>model[,<span class="dv">2</span>],</span>
 <span id="cb384-3"><a href="model.html#cb384-3" tabindex="-1"></a>    <span class="at">method =</span> <span class="st">&quot;pearson&quot;</span> )</span></code></pre></div>
-<pre><code>## [1] 9.065418e-18</code></pre>
+<pre><code>## [1] 9.812182e-18</code></pre>
 <div class="sourceCode" id="cb386"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb386-1"><a href="model.html#cb386-1" tabindex="-1"></a><span class="fu">cor</span>(<span class="at">x =</span> model2<span class="sc">$</span>residuals, </span>
 <span id="cb386-2"><a href="model.html#cb386-2" tabindex="-1"></a>    <span class="at">y =</span> model1<span class="sc">$</span>model[,<span class="dv">2</span>],</span>
 <span id="cb386-3"><a href="model.html#cb386-3" tabindex="-1"></a>    <span class="at">method =</span> <span class="st">&quot;pearson&quot;</span> )</span></code></pre></div>
-<pre><code>## [1] 4.738724e-17</code></pre>
+<pre><code>## [1] 2.884489e-17</code></pre>
 <p>The correlation coefficients are both nearly zero, so this last assumption is validated.</p>
 <p><strong><em>Which model is best?</em></strong>
 Both models explained ~80% of the variance in our dependent variable. Based on our process knowledge and the fit diagnostics, we can conclude that <code>model2</code> is better specified than <code>model1</code>. In examining our process knowledge and the residuals, however, we cannot help but wonder if a better model exists out there to predict body mass based on measurement variables?</p>
@@ -1125,7 +1125,7 @@ smoke from wildfires shows up (and that happens more often each year).</p>
 ## 6 440nm 2020-08-15 20:35:54 aeronet    0.394</code></pre>
 <p>Before we begin our calibration, let's examine the data using EDA techniques. We know that the <code>amod</code> column represents the instrument to be calibrated and the <code>aeronet</code> instrument represent the standard reference.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:aod-eda-4plot"></span>
-<img src="images/aod_eda_4plot.png" alt="A 4-plot EDA of our AOD Calibration Data" width="1050" />
+<img src="images/aod_eda_4plot.png" alt="A 4-plot EDA of our AOD Calibration Data"  />
 <p class="caption">
 Figure 11.12: A 4-plot EDA of our AOD Calibration Data
 </p>

@@ -115,7 +115,7 @@ intro
 how-to-use-this-book
 prerequisites
 grading
-grading-for-mech-476
+grading-for-tme-490
 homework-submission
 course-set-up
 install-r-and-rstudio

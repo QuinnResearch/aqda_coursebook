@@ -97,7 +97,7 @@ and the `stringr` package. We will also introduce the concept of
 **regular expressions** as a means to perform more advanced string
 manipulation.
 
-<img src="./images/parse_comic.png" alt="" width="1000" style="display: block; margin: auto;" />
+<img src="./images/parse_comic.png" alt="" style="display: block; margin: auto;" />
 
 ### String detect, match, subset
 
@@ -363,7 +363,7 @@ Sys.time()
 ```
 
 ```
-## [1] "2026-10-23 10:56:40 MDT"
+## [1] "2026-11-03 22:30:27 PST"
 ```
 
 As you can see, we got back the date, time, and timezone used by my computer
@@ -379,12 +379,12 @@ unclass(Sys.time())
 ```
 
 ```
-## [1] 1792774600
+## [1] 1793773828
 ```
 
 That's a lot of seconds.  How many years is that?  
 Just divide that number by [60s/min $\cdot$ 60min/hr $\cdot$ 24hr/d $\cdot$
-365d/yr] => 56.8485097 years.  
+365d/yr] => 56.8801949 years.  
 
 This calculation ignores leap years, but you get the point...
 
@@ -392,14 +392,14 @@ This calculation ignores leap years, but you get the point...
 
 Note that the `Sys.time()` function provided the date in a
 ***"year-month-day"*** format and the time in an ***"hour-minute-second"***
-format: 2026-10-23 10:56:40.470184.
+format: 2026-11-03 22:30:27.732468.
 
 Not everyone uses this exact ordering when they record dates and times, which
 is one of the reasons working with dates and times can be tricky. You probably
 have little difficulty recognizing the following date-time objects as
 equivalent but, for some computer programs, not so much:
 
-<table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<table class="table table-striped" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;">
 <caption>(\#tab:date-times-1)(\#tab:date-times-1)Date-time objects come in different forms</caption>
  <thead>
   <tr>
@@ -461,7 +461,7 @@ R has several classes of date-time objects, none of which are easy to remember:
 
 As a reminder, here are some common **object classes** in R:
 
-<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<table class="table" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;">
  <thead>
   <tr>
    <th style="text-align:left;"> Class </th>
@@ -521,7 +521,7 @@ unclass(time_now_ct)
 ```
 
 ```
-## [1] 1792774601
+## [1] 1793773828
 ```
 
 
@@ -532,18 +532,18 @@ str(unclass(time_now_lt)) # the `str()` function makes the output more compact
 
 ```
 ## List of 11
-##  $ sec   : num 40.5
-##  $ min   : int 56
-##  $ hour  : int 10
-##  $ mday  : int 23
-##  $ mon   : int 9
+##  $ sec   : num 28.1
+##  $ min   : int 30
+##  $ hour  : int 22
+##  $ mday  : int 3
+##  $ mon   : int 10
 ##  $ year  : int 126
-##  $ wday  : int 5
-##  $ yday  : int 295
-##  $ isdst : int 1
-##  $ zone  : chr "MDT"
-##  $ gmtoff: int -21600
-##  - attr(*, "tzone")= chr [1:3] "" "MST" "MDT"
+##  $ wday  : int 2
+##  $ yday  : int 306
+##  $ isdst : int 0
+##  $ zone  : chr "PST"
+##  $ gmtoff: int -28800
+##  - attr(*, "tzone")= chr [1:3] "" "PST" "PDT"
 ##  - attr(*, "balanced")= logi TRUE
 ```
 
@@ -580,7 +580,7 @@ punishment, I invite you to read the R Documentation with `?strptime`.
 Here are a few base R functions for working with date-time objects that are 
 worth knowing:
 
-<table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<table class="table table-striped" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;">
 <caption>(\#tab:base-r-times)(\#tab:base-r-times)Basic Date-time functions</caption>
  <thead>
   <tr>
@@ -693,7 +693,7 @@ with almost no effort on your part. But wait, there's more!
 The `lubridate` package contains parsing functions for almost any order you can 
 imagine.
 
-<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<table class="table" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;">
  <thead>
   <tr>
    <th style="text-align:left;"> Parsing Function </th>
@@ -721,7 +721,7 @@ the function call to parse time in "hours-minutes-seconds" format. Some
 additional examples of how you would parse time that followed from a `ymd` 
 format:
 
-<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<table class="table" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;">
  <thead>
   <tr>
    <th style="text-align:left;"> Parsing Function </th>
@@ -899,7 +899,7 @@ Another way to characterize the *untidiness* of this table is that we have three
 different exams (Exam1, Exam2, Exam3) that represent a variable (Exam_# or 
 Exam_type), that is not represented with a column.
 
-<table class="table table-condensed" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<table class="table table-condensed" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;">
 <caption>(\#tab:grades-untidy)(\#tab:grades-untidy)An Untidy Table of Exam Scores.</caption>
  <thead>
   <tr>
@@ -935,7 +935,7 @@ Thus, to tidy table \@ref(tab:grades-untidy), we need to create a variable
 called `Exam` and move all the scores into a new column vector named `Scores`.
 This effectively makes the data "long" rather than "wide".
 
-<table class="table table-condensed" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<table class="table table-condensed" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;">
 <caption>(\#tab:grades-tidy)(\#tab:grades-tidy)A Tidy Table of Exam Scores</caption>
  <thead>
   <tr>
@@ -1056,7 +1056,7 @@ tidygrades <- tidyr::pivot_longer(data = grades_untidy,
   ))
 ```
 
-<table class="table table-condensed" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<table class="table table-condensed" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;">
 <caption>(\#tab:grades-tab3)(\#tab:grades-tab3)Pivot longer applied to untidy data</caption>
  <thead>
   <tr>
