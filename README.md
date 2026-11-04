@@ -1,7 +1,7 @@
-# Engineering Data Analysis in R
+# Air Quiality and Data Analysis
 
-## Colorado State University
+## University of Washington Tacoma
 
-### Dr. John [Volckens](https://www.engr.colostate.edu/me/faculty/dr-john-volckens/) 
+### Dr. Casey [Quinn](https://directory.tacoma.uw.edu/index.php/employee/cq99) 
 
-This is a repository of open source course materials for MECH 476 at Colorado State University. The `bookdown` course materials are live [here](https://smogdr.github.io/edar_coursebook/).
+This is a repository of open source course materials for TME 490 at University of Washington Tacoma. The `bookdown` course materials are live [here]().
