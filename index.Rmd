@@ -416,15 +416,20 @@ including many available in print or online through the CSU library.
 
 ## Acknowledgements
 
+This course material has been adapted from work that developed for the course [Engineering Data Analysis in R] (https://smogdr.github.io/edar_coursebook/index.html) taught at Colorado State University by Dr. John Volckens. I am grateful for his willingness to share his work and provide the foundation as a resource for this course.
+
 Most of the introductory material for this book was adapted from Dr.
 Brooke Anderson's course on [R Programming for
 Research](https://geanders.github.io/RProgrammingForResearch/){target="_blank"}
-, to whom I owe thanks not only for the materials but for the many
-helpful discussions. I would also like to acknowledge [John
+, to whom Dr. Volckens and I owe thanks not only for the materials but for the many
+helpful discussions. 
+
+We would also like to acknowledge [John
 Tukey](http://rsbm.royalsocietypublishing.org/content/49/537.full.pdf+html){target="_blank"},
 one of the pioneers of exploratory data analysis, and the creators of
 the [NIST Engineering Statistics
 Handbook](https://doi.org/10.18434/M32189){target="_blank"}, from which
-I have drawn many techniques. Kathleen Wendt `@Wendtke`, the original TA
-for this course, also contributed a tremendous amount of effort to the
-original course setup and execution in 2020. Thank you!
+we have drawn many techniques. 
+
+Kathleen Wendt `@Wendtke`, the original TA
+for the Colorado State University course, also contributed a tremendous amount of effort to the original course setup and execution in 2020. 

@@ -544,7 +544,7 @@ sum(is.na(df_mpg))
 ```
 
 ```
-## [1] 3298
+## [1] 3452
 ```
 
 ``` r
@@ -553,7 +553,7 @@ sum(is.na(df_mpg))
 ```
 
 With a dataframe of this size, we shouldn't be surprised that there are 
-3298 `NA` values present. The next question is: where do
+3452 `NA` values present. The next question is: where do
 these `NA` values show up? There are several ways to answer this question;
 here, we will use the `stats::complete.cases()` function with a
 `dplyr::filter()` search. 
@@ -571,7 +571,7 @@ df_mpg |>
 ```
 
 ```
-## # A tibble: 1,642 × 13
+## # A tibble: 1,719 × 13
 ##       id make   model      year   cyl displ drive tran  v_class fuel_type comb08
 ##    <dbl> <fct>  <chr>     <dbl> <dbl> <dbl> <fct> <fct> <fct>   <fct>      <dbl>
 ##  1 16423 Nissan Altra EV   2000    NA    NA <NA>  <NA>  Midsiz… Electric…     85
@@ -584,7 +584,7 @@ df_mpg |>
 ##  8 18291 Ford   Explorer…  2002    NA    NA 2-Wh… <NA>  Sport … Electric…     39
 ##  9 19296 Toyota RAV4 EV    2003    NA    NA 2-Wh… <NA>  Sport … Electric…     78
 ## 10 30965 Ford   Ranger P…  2001    NA    NA 2-Wh… Auto… Standa… Electric…     58
-## # ℹ 1,632 more rows
+## # ℹ 1,709 more rows
 ## # ℹ 2 more variables: highway08 <dbl>, city08 <dbl>
 ```
 
@@ -621,7 +621,7 @@ df_mpg |>
 ```
 
 ```
-## # A tibble: 1,642 × 13
+## # A tibble: 1,719 × 13
 ##       id make   model      year   cyl displ drive tran  v_class fuel_type comb08
 ##    <dbl> <fct>  <chr>     <dbl> <dbl> <dbl> <fct> <fct> <fct>   <fct>      <dbl>
 ##  1 16423 Nissan Altra EV   2000    NA    NA <NA>  <NA>  Midsiz… Electric…     85
@@ -634,7 +634,7 @@ df_mpg |>
 ##  8 18291 Ford   Explorer…  2002    NA    NA 2-Wh… <NA>  Sport … Electric…     39
 ##  9 19296 Toyota RAV4 EV    2003    NA    NA 2-Wh… <NA>  Sport … Electric…     78
 ## 10 30965 Ford   Ranger P…  2001    NA    NA 2-Wh… Auto… Standa… Electric…     58
-## # ℹ 1,632 more rows
+## # ℹ 1,709 more rows
 ## # ℹ 2 more variables: highway08 <dbl>, city08 <dbl>
 ```
 
