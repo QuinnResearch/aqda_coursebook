@@ -1,7 +1,7 @@
 ---
 title: "Air Quality and Data Analysis"
 author: "Casey Quinn"
-date: "2026-11-06"
+date: "2026-11-12"
 site: bookdown::bookdown_site
 knit: "bookdown::render_book"
 output:
@@ -42,14 +42,13 @@ editor_options:
 
 <font size="5"> Preface </font>
 
-I developed this coursebook to help engineers begin to *think* about
-data. Most of my job at the university is to conduct research, yet most
-of the students who show up to my lab don't know where to begin when
+Introduction taken and adapted from [Engineering Data Analysis in R](https://smogdr.github.io/edar_coursebook/) written by Dr. John Volckens
+This coursebook has been developed to help engineers begin to *think* about
+data. Often students don't know where to begin when
 presented with data. The irony is that, while engineering students are
 continuously drilled on how to solve problems, they are rarely taught
-how to seek them out. My undergraduate advisor, Dr. David Hemenway, once
-told me: "The data are always trying to tell you something." This book
-is an introduction to *data listening* because listening comes before
+how to seek them out.  Dr. David Hemenway, once
+told my graduate advisor Dr. John Volckens: "The data are always trying to tell you something." This book is an introduction to *data listening* because listening comes before
 understanding.
 
 In broad terms, scientific and engineering research is about discovery:
@@ -80,7 +79,7 @@ Nearly all of the graphics and data presented in this book were created
 or manipulated in R. In many places, however, I have hidden the code in
 order to streamline the message. If you ever wonder "How did he do
 that?" you can download any of the R Markdowns on [the GitHub
-repository](https://github.com/SmogDr/edar_coursebook/), where this
+repository](https://github.com/QuinnResearch/aqda_coursebook), where this
 coursebook is hosted.
 
 ## Prerequisites
@@ -126,12 +125,6 @@ Course grades will be determined by the following three components:
 
 ### Homework submission
 
-There will be a homework assignment per coursebook chapter. Each
-homework will be due at the start of the class period when lecture
-coverage of the *next* chapter commences. For example, Chapter 2
-Homework will be due at the start of the first lecture regarding Chapter
-3.
-
 From RStudio, you will upload ("commit"/"push") your homework to a
 private folder on our class GitHub Organization. Your commits will be
 time-stamped; any commit after the start of class on a given day will be
@@ -170,7 +163,7 @@ McNamara](https://vis.social/@amelia){target="_blank"}.
 ### Install R and RStudio
 
 1.  Download and install the pre-compiled binary of the most recent
-    version (4.4+) of [R](https://cran.r-project.org){target="_blank"}
+    version of [R](https://cran.r-project.org){target="_blank"}
     appropriate for your machine's operating system
 2.  Download and install the most recent, preview version of
     [RStudio](https://rstudio.com/products/rstudio/download/#download){target="_blank"};
@@ -201,7 +194,7 @@ install.packages("tinytex")
 tinytex::install_tinytex()
 ```
 
-### Install the EDAR interactive tutorials
+### Install the interactive tutorials
 
 This course includes interactive R tutorials that allow you to practice
 R programming directly within RStudio. The tutorials are distributed in

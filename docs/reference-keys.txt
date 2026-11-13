@@ -119,7 +119,7 @@ grading-for-tme-490
 homework-submission
 course-set-up
 install-r-and-rstudio
-install-the-edar-interactive-tutorials
+install-the-interactive-tutorials
 install-git-and-create-a-github-account
 connect-git-github-and-rstudio
 create-new-project-github-first
